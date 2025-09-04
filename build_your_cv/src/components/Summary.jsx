@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export function Summary() {
+export function Summary({section_name}) {
     const [summary, setSummary] = useState("")
     const [draft, setDraft] = useState(summary)
     return (
@@ -11,8 +11,8 @@ export function Summary() {
             setDraft("")
         }}>
 
-            <label htmlFor="summary">Summary:</label>
-            <textarea
+            <label htmlFor="summary">{section_name}:</label>
+            <input
 
                 name="summary" 
                 id="summary"
@@ -27,7 +27,7 @@ export function Summary() {
             
             <button type="submit">Submit</button>
             
-            <div className="summarySection"> <h2 className="summaryTitle">Summary:</h2> {summary}</div>
+            <div className={section_name}> <h2 className="summaryTitle">{section_name}:</h2> {summary}</div>
         </form>
     </>
     )

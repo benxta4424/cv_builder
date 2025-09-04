@@ -40,3 +40,27 @@
 .read-the-docs {
   color: #888;
 }
+
+input {
+  border-radius: 10px;
+  border: 1px solid rebeccapurple;
+  height: 10px;
+  width: 90px;
+  padding: 6px;
+}
+.submitButton{
+  height: 30px;
+  width: 60px;
+  font-size: 10px;
+}
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 14px;
+  border: 1px solid red;
+
+  max-height: 400px;
+  height: 250px;
+  width: 700px;
+}
