@@ -1,46 +1,45 @@
 import { useState } from "react"
-import { Summary } from "./Summary"
+import { Inputs } from "./Inputs"
 
 export default function Contact() {
-  const [summaries, setSummaries] = useState({
-    "Full Name": "",
-    "Address": "",
-    "Email": "",
-    "Phone": "",
-    "Github": "",
+  const [capture, setCapture] = useState({
+    Name: "",
+    Phone: "",
+    Email: "",
+    Github: ""
   })
 
-  // helper to update a single field
-  const updateSummary = (key, value) => {
-    setSummaries((prev) => ({
+  const handleSummary = (field, value) => {
+    setCapture(prev => ({
       ...prev,
-      [key]: value,
+      [field]: value
     }))
   }
 
   return (
-    <div className="contactSection">
-      <h1>Info and Contact:</h1>
+    <>
+    <div className="contactContainer">
+      <div className="summarySection">
+        <h2>Info and Contact:</h2>
 
-      {/* Render the inputs */}
-      {Object.keys(summaries).map((section) => (
-        <Summary
-          key={section}
-          section_name={section}
-          value={summaries[section]}
-          onChange={(val) => updateSummary(section, val)}
-        />
-      ))}
+        <Inputs section_name={"Name"} onSend={handleSummary} />
+        <Inputs section_name={"Phone"} onSend={handleSummary} />
+        <Inputs section_name={"Email"} onSend={handleSummary} />
+        <Inputs section_name={"Github"} onSend={handleSummary} />
+      </div>
 
-      {/* Render collected results separately */}
-      <div className="printSection">
-        <h2>Collected Info:</h2>
-        {Object.entries(summaries).map(([key, value]) => (
-          <div key={key} className={key}>
-            <h3>{key}:</h3> {value}
-          </div>
-        ))}
+      <div className="capturedContainer">
+        <div className="nameAndPhone">
+          <div className="name">{capture.Name}</div>
+          <div className="phone">{capture.Phone}</div>
+        </div>
+
+        <div className="emailAndGithub">
+          <div className="email">{capture.Email}</div>
+          <div className="github">{capture.Github}</div>
+        </div>
       </div>
     </div>
+    </>
   )
 }

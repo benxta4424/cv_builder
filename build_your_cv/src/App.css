@@ -1,66 +1,85 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.hide {
+  display: flex;
+}
+.contactContainer {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start;
+  gap: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.summarySection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 14px;
+  border: 1px solid rebeccapurple;
+  padding: 15px;
+  border-radius: 10px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.capturedContainer {
+  flex: 1; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+  
+  min-width: 550px;
+  max-width: 800px;
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  color: whitesmoke;
 }
 
 input {
-  border-radius: 10px;
-  border: 1px solid rebeccapurple;
-  height: 10px;
-  width: 90px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  height: 15px;
+  width: 120px;
   padding: 6px;
-}
-.submitButton{
-  height: 30px;
-  width: 60px;
-  font-size: 10px;
-}
-.contactSection {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   font-size: 14px;
-  border: 1px solid red;
+}
 
-  max-height: 400px;
-  height: 250px;
-  width: 700px;
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 19px;
+  width: 50px;
+  font-size: 11px;
+  line-break: auto;
+  border-radius: 6px;
+  border: 1px solid rebeccapurple;
+  background-color: rebeccapurple;
+  color: white;
+  cursor: pointer;
+
+  font-family: 'Times New Roman', Times, serif;
+
+}
+button:hover {
+  background-color: indigo;
+}
+.nameAndPhone {
+  min-width: 200px;
+}
+.emailAndGithub {
+  max-width: 150px;
+  font-size: 10px;
+  font-weight: 300;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px;
+}
+.name {
+  font-size: 23px;
+  font-weight: 900;
+}
+.phone {
+  font-size: 14px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
