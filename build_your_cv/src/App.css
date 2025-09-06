@@ -51,6 +51,10 @@ h1, h2, h3, h4, h5, h6 {
   align-items: flex-start;
   gap: 20px;
 }
+#root {
+  display: flex;
+  flex: 1;
+}
 
 .summarySection {
   flex: 1;
@@ -79,6 +83,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 800px;
 
   color: whitesmoke;
+  margin-bottom: 50px;
 }
 
 input {
@@ -114,7 +119,8 @@ button:hover {
   box-shadow: 3px -1px 10px purple;
   padding: 10px;
   border-radius: 3px;
-  max-width: 100px;
+  max-width: 120px;
+  min-width: 90px;
 }
 .nameAndPhone {
   min-width: 200px;
@@ -131,7 +137,18 @@ button:hover {
   font-weight: 900;
 }
 .phone {
+  display: flex;
+  text-align: center;
+  word-break: break-all;
+  padding: 10px;
+  flex-wrap: wrap;
   font-size: 14px;
+  min-width: 140px;
+  max-width: 400px;
+
+  min-height: 40px;
+  height: 100px;
+  max-height: 200px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .summaryTitle {
@@ -147,6 +164,7 @@ button:hover {
   padding: 10px;
   flex-direction: column;
   gap: 10px;
-  min-width: 550px;
+  min-width: 580px;
   max-width: 600px;
+  margin-bottom: 90px;
 }

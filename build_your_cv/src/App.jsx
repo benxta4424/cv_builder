@@ -5,14 +5,16 @@ import './App.css'
 import { Inputs } from './components/Inputs'
 import Contact from './components/Contact'
 import Summary from './components/Summary'
+import Experience from './components/Experience'
 
 function App() {
 
   return (
     <>
       <div className="appContainer">
-        <Contact />
-        <Summary />
+        <Contact title = "Info and Contact" />
+        <Summary title = "Summary" />
+        <Experience/>
       </div>
     </>
   )

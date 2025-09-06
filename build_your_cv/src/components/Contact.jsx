@@ -1,13 +1,8 @@
 import { useState } from "react"
 import { Inputs } from "./Inputs"
 
-export default function Contact() {
-  const [capture, setCapture] = useState({
-    Name: "",
-    Phone: "",
-    Email: "",
-    Github: ""
-  })
+export default function Contact(props) {
+  const [capture, setCapture] = useState({})
 
   const allInputs = ["Name", "Phone", "Email", "Github"]
 
@@ -22,7 +17,7 @@ export default function Contact() {
     <>
     <div className="contactContainer">
       <div className="summarySection">
-        <h2 className="infoAndContact">Info and Contact</h2>
+        <h2 className="infoAndContact">{props.title}</h2>
 
         {allInputs.map((customInput) => (
           <Inputs 
