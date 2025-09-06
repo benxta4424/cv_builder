@@ -4,12 +4,16 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Inputs } from './components/Inputs'
 import Contact from './components/Contact'
+import Summary from './components/Summary'
 
 function App() {
 
   return (
     <>
-      <Contact />
+      <div className="appContainer">
+        <Contact />
+        <Summary />
+      </div>
     </>
   )
 }

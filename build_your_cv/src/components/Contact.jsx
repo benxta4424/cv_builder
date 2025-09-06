@@ -9,6 +9,8 @@ export default function Contact() {
     Github: ""
   })
 
+  const allInputs = ["Name", "Phone", "Email", "Github"]
+
   const handleSummary = (field, value) => {
     setCapture(prev => ({
       ...prev,
@@ -20,12 +22,15 @@ export default function Contact() {
     <>
     <div className="contactContainer">
       <div className="summarySection">
-        <h2>Info and Contact:</h2>
+        <h2 className="infoAndContact">Info and Contact</h2>
 
-        <Inputs section_name={"Name"} onSend={handleSummary} />
-        <Inputs section_name={"Phone"} onSend={handleSummary} />
-        <Inputs section_name={"Email"} onSend={handleSummary} />
-        <Inputs section_name={"Github"} onSend={handleSummary} />
+        {allInputs.map((customInput) => (
+          <Inputs 
+          key = {customInput}
+          section_name = {customInput}
+          onSend = {handleSummary}
+          />
+        ))}
       </div>
 
       <div className="capturedContainer">
@@ -36,7 +41,7 @@ export default function Contact() {
 
         <div className="emailAndGithub">
           <div className="email">{capture.Email}</div>
-          <div className="github">{capture.Github}</div>
+          <a className="github">{capture.Github}</a>
         </div>
       </div>
     </div>
