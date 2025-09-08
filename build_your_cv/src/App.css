@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 20px;
+  gap: 25px;
   font-size: 10px;
   padding: 15px;
   border-radius: 10px;
@@ -84,6 +84,25 @@ h1, h2, h3, h4, h5, h6 {
 
   color: whitesmoke;
   margin-bottom: 50px;
+}
+.sectionTitle {
+  margin-bottom: 10px;
+  box-shadow: -2px 1px 0px #846598;
+  transition-duration: 2.5s;
+  text-align: center;
+  font-weight: 900;
+  font-size: 20px;
+  font-style: italic;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.sectionTitle:hover {
+  background-color: #ffbcf3;
+  box-shadow: -2px 1px 10px 10px #ff0fdd;
+  scale: 1.1;
+  color: black;
+  transition-duration: 1.3s;
+  animation: ease-in;
+  cursor: pointer;
 }
 
 input {
@@ -121,16 +140,36 @@ button:hover {
   border-radius: 3px;
   max-width: 120px;
   min-width: 90px;
+  font-size: 13px;
 }
 .nameAndPhone {
   min-width: 200px;
 }
 .emailAndGithub {
+  margin-top: 37px;
   max-width: 150px;
-  font-size: 10px;
   font-weight: 300;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 10px;
+
+  
+  min-width: 150px;
+  max-height: 50px;
+}
+.emailAndGithub:hover {
+  scale: 1.25;
+  box-shadow: 2px -3px 1px 0px red;
+  cursor: pointer;
+}
+.email {
+  font-size: 10px;
+  font-weight: 300;
+  font-style: italic;
+}
+.github {
+  font-size: 8px;
+  font-weight: 900;
+  font-style: oblique;
 }
 .name {
   font-size: 23px;
@@ -163,8 +202,9 @@ button:hover {
   box-shadow: -2px 2px 1px grey;
   padding: 10px;
   flex-direction: column;
-  gap: 10px;
-  min-width: 580px;
-  max-width: 600px;
-  margin-bottom: 90px;
+  gap: 20px;
+  min-width: 550px;
+  max-width: 280px;
+  margin-bottom: 70px;
+  margin-right: 80px;
 }

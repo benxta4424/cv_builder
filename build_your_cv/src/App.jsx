@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <div className="appContainer">
-        <Contact title = "Info and Contact" />
+        <Contact title = "Info and Contact" first="Name" second="Phone" third="Email" fourth="Github" />
         <Summary title = "Summary" />
         <Experience/>
       </div>

@@ -5,7 +5,7 @@ import Contact from "./Contact"
 export default function Experience() {
     return (<>
         <div className="experienceSection">
-            < Contact title="Experience" />
+            < Contact title="Experience" first="Company" second="Description" third="Period" fourth="Role" />
         </div>
     </>)
 }

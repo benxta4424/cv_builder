@@ -4,7 +4,7 @@ import { Inputs } from "./Inputs"
 export default function Contact(props) {
   const [capture, setCapture] = useState({})
 
-  const allInputs = ["Name", "Phone", "Email", "Github"]
+  const allInputs = [props.first, props.second, props.third, props.fourth]
 
   const handleSummary = (field, value) => {
     setCapture(prev => ({
@@ -30,13 +30,14 @@ export default function Contact(props) {
 
       <div className="capturedContainer">
         <div className="nameAndPhone">
-          <div className="name">{capture.Name}</div>
-          <div className="phone">{capture.Phone}</div>
+          <div className="sectionTitle">{props.title}</div>
+          <div className="name">{capture[props.first]}</div>
+          <div className="phone">{capture[props.second]}</div>
         </div>
 
         <div className="emailAndGithub">
-          <div className="email">{capture.Email}</div>
-          <a className="github">{capture.Github}</a>
+          <div className="email">{capture[props.third]}</div>
+          <div className="github">{capture[props.fourth]}</div>
         </div>
       </div>
     </div>
