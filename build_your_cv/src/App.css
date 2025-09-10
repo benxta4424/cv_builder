@@ -208,3 +208,12 @@ button:hover {
   margin-bottom: 70px;
   margin-right: 80px;
 }
+
+
+
+/* download button */
+.downloadButton {
+  font-size: 15px;
+  padding: 20px;
+  width: 70px;
+}
