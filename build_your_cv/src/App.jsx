@@ -15,6 +15,9 @@ function App() {
         <Contact title = "Info and Contact" first="Name" second="Phone" third="Email" fourth="Github" />
         <Summary title = "Summary" />
         <Experience/>
+        {/*for education we dont need a component im just gonna render the Experience component as it will have the same layout */}
+
+        <Contact title="Education" first="School" second="Achievements" third="Degree" fourth="Year"/>
       </div>
     </>
   )

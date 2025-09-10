@@ -28,6 +28,7 @@ export function Inputs(props) {
                 id="summary"
                 value={draft}
                 onInput={ inputSubmit }
+                autocomplete="off"
             />
             
             <button type="submit">Submit</button>
